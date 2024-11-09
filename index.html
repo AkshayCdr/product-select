@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lusitana:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="product-selector">
+            <header class="banner">
+                <div class="line"></div>
+                <h1>YAY! it's BOGO</h1>
+                <div class="line"></div>
+            </header>
+
+            <form action="">
+                <div class="product">
+                    <div class="product-option">
+                        <div class="quantity">
+                            <input
+                                type="radio"
+                                name=""
+                                id="single-unit"
+                                name="quantity"
+                            />
+
+                            <div class="price-info">
+                                <div class="quantity-header">
+                                    <label
+                                        for="single-unit"
+                                        class="quantity-heading"
+                                        >1 unit
+                                    </label>
+                                    <span class="discount-badge">10% Off</span>
+                                </div>
+                                <span>Standard Price</span>
+                            </div>
+                        </div>
+
+                        <span class="price">$10.00 USD</span>
+                    </div>
+                    <div class="product-customization">
+                        <label for="size" class="size">Size</label>
+                        <label for="color" class="color">Colour</label>
+
+                        <span class="select1">#1</span>
+                        <select name="size1" class="size-select-1 select-input">
+                            <option value="S">S</option>
+                        </select>
+                        <select
+                            name="color1"
+                            class="color-select-1 select-input"
+                        >
+                            <option value="black">Black</option>
+                        </select>
+
+                        <span class="select2">#2</span>
+
+                        <select name="size2" class="size-select-2 select-input">
+                            <option value="S">S</option>
+                        </select>
+                        <select
+                            name="color2"
+                            class="color-select-2 select-input"
+                        >
+                            <option value="colour">Colour</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
