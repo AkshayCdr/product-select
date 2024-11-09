@@ -3,6 +3,7 @@
     --line-color: hsl(0, 0%, 78%);
     --banner-font-size: 20px;
     --heading-font-weight: 500;
+    --small-font-size: 12px;
     --background-color: #f4e0e3;
     --thin-font: 300;
 }
@@ -51,7 +52,7 @@ body {
     border: 1px solid var(--line-color);
     padding: 2em;
     gap: 20px;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
 }
 
 .most-popular-banner {
@@ -67,6 +68,7 @@ body {
     right: 8px;
     border-radius: 0 0 10px 10px;
 }
+
 .triangle-right {
     width: 0;
     height: 0;
@@ -108,6 +110,16 @@ body {
     gap: 0.1em;
 }
 
+.price-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.previous-price {
+    color: var(--line-color);
+    text-decoration: line-through;
+}
+
 .quantity {
     display: flex;
     gap: 15px;
@@ -144,6 +156,7 @@ body {
     width: 60%;
     padding: 0.7em;
     /* grid-auto-rows: minmax(50px, auto); */
+    display: none;
 }
 
 .size {
@@ -192,7 +205,6 @@ body {
 }
 
 .select-input {
-    /* max-width: 80%; */
     height: 40px;
     border: 1px solid var(--line-color);
     border-radius: 3px;
@@ -200,4 +212,44 @@ body {
     font-size: medium;
     font-weight: var(--thin-font);
     background-color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery-info {
+    font-size: larger;
+    color: var(--banner-color);
+    font-weight: var(--heading-font-weight);
+}
+.total-price {
+    font-size: larger;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--banner-color);
+    height: 50px;
+    font-size: var(--banner-font-size);
+    font-weight: var(--heading-font-weight);
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+    background-color: var(--background-color);
 }
