@@ -4,6 +4,7 @@
     --banner-font-size: 20px;
     --heading-font-weight: 500;
     --small-font-size: 12px;
+
     --background-color: #f4e0e3;
     --thin-font: 300;
 }
@@ -19,7 +20,8 @@ body {
 }
 
 .product-selector {
-    max-width: 50%;
+    /* max-width: 40%; */
+    width: 30%;
     margin: 39px auto;
     display: flex;
     flex-direction: column;
@@ -67,6 +69,10 @@ body {
     top: -10px;
     right: 8px;
     border-radius: 0 0 10px 10px;
+}
+
+.most-popular {
+    font-size: small;
 }
 
 .triangle-right {
@@ -137,10 +143,29 @@ body {
     font-size: larger;
 }
 
-#single-unit {
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    appearance: none; /* why ? */
+    border: 2px solid var(--line-color);
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    border-color: var(--banner-color);
+}
+
+input[type="radio"]:checked:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--banner-color);
 }
 
 .price {
@@ -156,7 +181,7 @@ body {
     width: 60%;
     padding: 0.7em;
     /* grid-auto-rows: minmax(50px, auto); */
-    display: none;
+    /* display: none; */
 }
 
 .size {
@@ -252,4 +277,73 @@ body {
 .active {
     display: block;
     background-color: var(--background-color);
+}
+
+@media (max-width: 1500px) {
+    .product-selector {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1340px) {
+    .product-selector {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-selector {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-selector {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-selector {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .quantity-heading {
+        font-size: medium;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+    }
+
+    .discount-badge {
+        font-size: medium;
+        padding: 0.1em;
+    }
+    .price {
+        font-size: medium;
+    }
+    .previous-price {
+        font-size: small;
+    }
+    .size {
+        font-size: small;
+    }
+
+    .color {
+        font-size: small;
+    }
+
+    .select-input {
+        font-size: small;
+    }
+
+    .select1 {
+        font-size: small;
+    }
+    .select2 {
+        font-size: small;
+    }
 }
