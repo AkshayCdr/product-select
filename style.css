@@ -4,8 +4,7 @@
     --banner-font-size: 20px;
     --heading-font-weight: 500;
     --small-font-size: 12px;
-
-    --background-color: #f4e0e3;
+    --background-color: #eee6e7;
     --thin-font: 300;
 }
 
@@ -21,11 +20,11 @@ body {
 
 .product-selector {
     max-width: 600px;
-    /* width: 30%; */
     margin: 39px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: stretch;
 }
 
 .banner {
@@ -49,12 +48,11 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    /* justify-content: center; */
     width: 100%;
     border: 1px solid var(--line-color);
     padding: 2em;
+    min-height: 100px;
     gap: 20px;
-    /* background-color: var(--background-color); */
 }
 
 .most-popular-banner {
@@ -69,6 +67,9 @@ body {
     top: -10px;
     right: 8px;
     border-radius: 0 0 10px 10px;
+    /* overflow: hidden; */
+
+    /* text-overflow: ellipsis;  */
 }
 
 .most-popular {
@@ -148,7 +149,7 @@ input[type="radio"] {
     height: 20px;
     border-radius: 50%;
     position: relative;
-    appearance: none; /* why ? */
+    appearance: none;
     border: 2px solid var(--line-color);
     cursor: pointer;
 }
@@ -177,11 +178,8 @@ input[type="radio"]:checked:before {
     display: grid;
     grid-template-columns: 1fr 40% 40%;
     gap: 7px;
-    /* background-color: violet; */
     width: 60%;
     padding: 0.7em;
-    /* grid-auto-rows: minmax(50px, auto); */
-    /* display: none; */
 }
 
 .size {
@@ -275,8 +273,16 @@ input[type="radio"]:checked:before {
 }
 
 .active {
-    display: block;
     background-color: var(--background-color);
+    border: 2px solid var(--banner-color);
+}
+
+.pumper {
+    text-align: right;
+    color: #00000066;
+    font-style: italic;
+    font-size: large;
+    margin-top: 7px;
 }
 
 @media (max-width: 640px) {
@@ -284,6 +290,13 @@ input[type="radio"]:checked:before {
         width: 90%;
     }
 
+    .pumper,
+    .price,
+    .previous-price,
+    .btn,
+    .delivery-info,
+    .total-price,
+    .discount-badge,
     .quantity-heading {
         font-size: medium;
     }
@@ -293,11 +306,9 @@ input[type="radio"]:checked:before {
     }
 
     .discount-badge {
-        font-size: medium;
         padding: 0.1em;
     }
-    .price,
-    .previous-price,
+    .standard-price,
     .size,
     .color,
     .select-input,

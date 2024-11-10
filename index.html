@@ -11,6 +11,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <main class="product-selector">
@@ -22,7 +23,7 @@
 
             <form action="" class="form">
                 <!-- first item   -->
-                <div class="product-options-form">
+                <div class="product-option-item">
                     <div class="product">
                         <div class="product-option">
                             <div class="quantity">
@@ -43,7 +44,9 @@
                                             >10% Off</span
                                         >
                                     </div>
-                                    <span>Standard Price</span>
+                                    <span class="standard-price"
+                                        >Standard Price</span
+                                    >
                                 </div>
                             </div>
                             <div class="price-container">
@@ -51,7 +54,7 @@
                                 <span class="previous-price">$24.00 USD</span>
                             </div>
                         </div>
-                        <div class="product-customization">
+                        <div class="product-customization hidden">
                             <label for="size" class="size">Size</label>
                             <label for="color" class="color">Colour</label>
 
@@ -87,7 +90,7 @@
                     </div>
                 </div>
                 <!-- second item -->
-                <div class="product-options-form">
+                <div class="product-option-item">
                     <div class="product">
                         <div class="product-option">
                             <div class="quantity">
@@ -117,7 +120,7 @@
                                 <span class="previous-price">$24.00 USD</span>
                             </div>
                         </div>
-                        <div class="product-customization">
+                        <div class="product-customization hidden">
                             <label for="size" class="size">Size</label>
                             <label for="color" class="color">Colour</label>
 
@@ -159,7 +162,7 @@
                 </div>
 
                 <!-- third item  -->
-                <div class="product-options-form">
+                <div class="product-option-item">
                     <div class="product">
                         <div class="product-option">
                             <div class="quantity">
@@ -189,7 +192,7 @@
                                 <span class="previous-price">$24.00 USD</span>
                             </div>
                         </div>
-                        <div class="product-customization">
+                        <div class="product-customization hidden">
                             <label for="size" class="size">Size</label>
                             <label for="color" class="color">Colour</label>
 
@@ -229,8 +232,10 @@
                     <p class="delivery-info">Free Delivery</p>
                     <p class="total-price">Total : $18.00 USD</p>
                 </div>
-
-                <button type="submit" class="btn">+ Add to Cart</button>
+                <div>
+                    <button type="submit" class="btn">+ Add to Cart</button>
+                    <p class="pumper">@ Powered by Pumper</p>
+                </div>
             </form>
         </main>
     </body>
