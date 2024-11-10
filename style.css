@@ -20,8 +20,8 @@ body {
 }
 
 .product-selector {
-    /* max-width: 40%; */
-    width: 30%;
+    max-width: 600px;
+    /* width: 30%; */
     margin: 39px auto;
     display: flex;
     flex-direction: column;
@@ -279,37 +279,11 @@ input[type="radio"]:checked:before {
     background-color: var(--background-color);
 }
 
-@media (max-width: 1500px) {
-    .product-selector {
-        width: 50%;
-    }
-}
-
-@media (max-width: 1340px) {
-    .product-selector {
-        width: 60%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .product-selector {
-        width: 70%;
-    }
-}
-
-@media (max-width: 1000px) {
-    .product-selector {
-        width: 80%;
-    }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     .product-selector {
         width: 90%;
     }
-}
 
-@media (max-width: 400px) {
     .quantity-heading {
         font-size: medium;
     }
@@ -322,27 +296,12 @@ input[type="radio"]:checked:before {
         font-size: medium;
         padding: 0.1em;
     }
-    .price {
-        font-size: medium;
-    }
-    .previous-price {
-        font-size: small;
-    }
-    .size {
-        font-size: small;
-    }
-
-    .color {
-        font-size: small;
-    }
-
-    .select-input {
-        font-size: small;
-    }
-
-    .select1 {
-        font-size: small;
-    }
+    .price,
+    .previous-price,
+    .size,
+    .color,
+    .select-input,
+    .select1,
     .select2 {
         font-size: small;
     }
